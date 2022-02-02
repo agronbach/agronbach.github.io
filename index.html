@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
 body,h1,h2{font-family: "Raleway", sans-serif}
+h1,h2{text-shadow: 2px 2px black;}
 body, html {height: 100%}
 p {line-height: 2}
 .bgimg, .bgimg2 {
@@ -22,7 +23,7 @@ p {line-height: 2}
 <!-- Header / Home-->
 <header class="w3-display-container w3-wide bgimg" id="home">
   <br><br><br><br><br><br><br><br><br>
-  <div class="w3-text-black w3-center">
+  <div class="w3-text-white w3-center">
   <!--div class="w3-display-middle w3-text-white w3-center"-->
     <h1 style='font-size:63px;'>Alex & Sam</h1>
     <h2>are celebrating their 18 month anniversary</h2>
@@ -78,29 +79,45 @@ p {line-height: 2}
 <!-- Wedding information -->
 <div class="w3-container w3-padding-64 w3-pale-red w3-center" id="wedding">
   <div class="w3-content">
-    <h1 class="w3-text-grey"><b>THE WEDDING</b></h1>
+    <h1 class="w3-text-gray"><b>THE WEDDING</b></h1>
     <iframe src="https://evt.live/sammryder_eventlive/sam-alex-s-wedding/embed" width="100%" height="600" style="max-width:800px;margin:0 auto;" allowfullscreen allow="autoplay" allowtransparency="true" frameborder="0"></iframe>
     <div class="w3-row">
-      <h1 class="w3-text-grey"><b>THE 18 MONTH ANNIVERSARY PARTY WEEKEND</b></h1>
+      <h1 class="w3-text-gray"><b>THE 18 MONTH ANNIVERSARY PARTY WEEKEND</b></h1>
       <div class="w3-half">
-        <h2>When</h2>
-        <p>04.08.2022: Welcome Happy Hour (TBD Evening)</p>
-        <p>04.09.2022: Party! (6:30pm MDT - ???)</p>
-        <p>04.10.2022: 18 Month Anniversary Reception - (TBD late morning)</p><br>
+        <h3 class="w3-text-gray">When</h3>
+        <p class="w3-text-gray">04.08.2022 (Fri): Happy Hour (TBD)</p>
+        <p class="w3-text-gray">04.09.2022 (Sat): Party! (6:30pm MDT)</p>
+        <p class="w3-text-gray">04.10.2022 (Sun): Brunch (TBD)</p><br>
       </div>
       <div class="w3-half">
-        <h2>Where</h2>
-        <p>Boulder, CO (TBD)</p>
-        <p>Downtown Boulder, CO (TBD)</p>
-        <p>Boulder, CO (TBD)<br>
+        <h3 class="w3-text-gray">Where</h3>
+        <p class="w3-text-gray">4225 Apache Rd Boulder, CO</p>
+        <p class="w3-text-gray">Downtown Boulder, CO (TBD)</p>
+        <p class="w3-text-gray">Boulder, CO (TBD)<br>
       </div>
     </div>
   </div>
 </div>
 
+<!-- Lodging section -->
+<div class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide" id="rsvp">
+  <h1 class="w3-text-gray"><b>Where to Stay</b></h1>
+  <p class="w3-text-gray">We have negotiated group discounts at the following two pet-friendly hotels, but you are of course welcome to book wherever you desire!</p>
+  <div class="w3-half">
+     <h3 class="w3-text-gray"><b>Fairfield by Marriott Boulder</b></h3>
+        <p class="w3-text-gray">Rates start at $119/night</p>
+        <p class="w3-text-gray">Code: "Gronbach Party"</p><br>
+      </div>
+     <h3 class="w3-text-gray"><b>Homewood Suites by Hilton Boulder</b></h3>
+        <p class="w3-text-gray">Rates start at $135/night for King Suite</p>
+        <p class="w3-text-gray">Code: "Gronbach Anniversary Party"</p><br>
+      </div>
+</div>
+<br><br>
+  
 <!-- RSVP section -->
 <div class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide" id="rsvp">
-  <h1>HOPE YOU CAN MAKE IT!</h1>
+  <h1 class="w3-text-gray"><b>HOPE YOU CAN MAKE IT!</b></h1>
   <p class="w3-xlarge">
     <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">RSVP</button>
   </p>
