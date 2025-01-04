@@ -8,7 +8,8 @@
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
-            margin: 2rem;
+            margin: 2rem auto; /* Center the content */
+            max-width: 960px; /* Set a maximum width */
             line-height: 1.6;
             color: #333;
         }
@@ -25,11 +26,23 @@
         }
         .ugift-preview {
             border: 1px solid #ccc;
-            padding: 1.5rem;
+            padding: 2rem; /* Increased padding */
             margin-top: 2rem;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
             background-color: #f8f8f8;
+        }
+        .gift-info-grid { /* New grid layout for gift info */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+            gap: 1rem;
+            margin-bottom: 1rem; /* Add some spacing below */
+        }
+        .gift-info-item { /* Style for each gift info item */
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 5px;
+            background-color: white;
         }
         .gift-options {
             display: flex;
@@ -38,16 +51,17 @@
         }
         .gift-option {
             border: 2px solid #0099cc;
-            padding: 0.75rem 1.25rem;
+            padding: 1rem; /* Increased padding */
             cursor: pointer;
             border-radius: 5px;
-            background-color: white;
+            background-color: #e6f2f9; /* Corrected background color */
             transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-            color: #0099cc;
+            color: #0099cc; /* Corrected text color */
             font-weight: 600;
             text-align: center;
             flex: 1;
             margin: 0 0.5rem;
+            font-size: 1.1rem; /* Increased font size */
         }
         .gift-option:hover {
             background-color: #0099cc;
@@ -68,7 +82,7 @@
         a:hover {
             text-decoration: underline;
         }
-        .button-container { /* Correct class name */
+        .button-container {
             display: flex;
             justify-content: center;
             gap: 1rem;
@@ -84,7 +98,7 @@
             font-size: 1rem;
             transition: background-color 0.3s ease;
         }
-                button:hover {
+        button:hover {
           background-color: #0077b3;
         }
         input[type="number"]{
@@ -110,9 +124,17 @@
 
     <div class="ugift-preview">
         <h3>Gift Information</h3>
-        <p><strong>Initial Account Holder:</strong> Alexander G (This account is currently in her father's name and will be transferred to our little one once we receive her Social Security number after she is born.)</p>
-        <p><strong>Account Owner:</strong> Alexander G</p>
-        <p><strong>Ugift Code:</strong> <strong>U66-R0C</strong></p>
+        <div class="gift-info-grid">
+            <div class="gift-info-item">
+                <strong>Initial Account Holder:</strong><br>Alexander G<br>(This account is currently in her father's name and will be transferred to our little one once we receive her Social Security number after she is born.)
+            </div>
+            <div class="gift-info-item">
+                <strong>Account Owner:</strong><br>Alexander G
+            </div>
+            <div class="gift-info-item">
+                <strong>Ugift Code:</strong><br><strong>U66-R0C</strong>
+            </div>
+        </div>
         <p><em>You can make a gift to anyone else's CollegeInvest account and receive a Colorado tax deduction for yourself!</em></p>
 
         <h3>How much would you like to give?</h3>
