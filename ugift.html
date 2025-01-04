@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Baby G's 529 Fund!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 2rem;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1, h2, h3 {
+            font-weight: 600;
+            color: #004a80;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        h2 {
+            margin-top: 2rem;
+        }
+        .ugift-preview {
+            border: 1px solid #ccc;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .gift-options {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1rem;
+        }
+        .gift-option {
+            border: 1px solid #0099cc;
+            padding: 0.75rem 1.25rem;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: #e6f2f9;
+            transition: background-color 0.3s ease;
+            color: #004a80;
+        }
+        .gift-option:hover {
+            background-color: #cce6f2;
+        }
+        strong {
+            font-weight: 600;
+        }
+        em {
+            font-style: italic;
+            color: #666;
+        }
+        a {
+            color: #0099cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+            background-color: #0099cc;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+          background-color: #0077b3;
+        }
+        input[type="number"]{
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          box-sizing: border-box;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to Baby G's 529 Fund!</h1>
+    <p>We're so excited to welcome our little Baby Gronbach into the world! To help with her future education, we've set up a 529 college savings plan. Instead of traditional gifts, we would be incredibly grateful for any contributions you'd like to make towards her future.</p>
+
+    <h2>Contribute to Baby G's 529 Plan through Ugift</h2>
+    <p>We're using Ugift, a secure platform that allows you to easily contribute. Here's how:</p>
+
+    <div class="ugift-preview">
+        <h3>Gift Information</h3>
+        <p><strong>Initial Account Holder:</strong> Alexander G (This account is currently in her father's name and will be transferred to our little one once we receive her Social Security number after she is born.)</p>
+        <p><strong>Account Owner:</strong> Alexander G</p>
+        <p><strong>Ugift Code:</strong> <strong>U66-R0C</strong></p>
+        <p><em>You can make a gift to anyone else's CollegeInvest account and receive a Colorado tax deduction for yourself!</em></p>
+
+        <h3>How much would you like to give?</h3>
+        <input type="number" id="gift-amount" value="0.00">
+        <div class="gift-options">
+            <div class="gift-option" data-amount="25">$25 (Popular gift amount)</div>
+            <div class="gift-option" data-amount="157">$157 (avg weekly cost for college meals)</div>
+            <div class="gift-option" data-amount="415">$415 (avg annual cost of required course materials)</div>
+        </div>
+
+        <p>Help Baby G save! The money saved can go toward more than just tuition. A little can go a long way!</p>
+
+        <h3>Making Your Contribution</h3>
+        <p>There are two ways you can contribute to Baby G's 529 plan:</p>
+        <ul>
+            <li><strong>Electronically:</strong> You can easily contribute electronically through Ugift by clicking the button below. This is the fastest and most secure method.</li>
+            <li><strong>By Mail:</strong> If you prefer to contribute by mail, you can download a printable contribution form by clicking <a href="https://www.collegeinvest529.com/cotpl/gift/gifterCoupon.cs?uGiftId=U66-R0C" target="_blank">here</a>.</li>
+        </ul>
+
+        <a href="https://www.ugift.com/" target="_blank"><button>Contribute Electronically</button></a>
+    </div>
+    <p>If you have any questions or need help with this process, please don't hesitate to reach out!</p>
+    <script>
+        const giftOptions = document.querySelectorAll('.gift-option');
+        const giftAmountInput = document.getElementById('gift-amount');
+
+        giftOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                giftAmountInput.value = option.dataset.amount;
+            });
+        });
+    </script>
+</body>
+</html>
