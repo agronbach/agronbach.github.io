@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Baby G's 529 Fund!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
@@ -29,6 +29,7 @@
             margin-top: 2rem;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
+            background-color: #f8f8f8;
         }
         .gift-options {
             display: flex;
@@ -36,16 +37,22 @@
             margin-top: 1rem;
         }
         .gift-option {
-            border: 1px solid #0099cc;
+            border: 2px solid #0099cc;
             padding: 0.75rem 1.25rem;
             cursor: pointer;
             border-radius: 5px;
-            background-color: #e6f2f9;
-            transition: background-color 0.3s ease;
-            color: #004a80;
+            background-color: white;
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+            color: #0099cc;
+            font-weight: 600;
+            text-align: center;
+            flex: 1;
+            margin: 0 0.5rem;
         }
         .gift-option:hover {
-            background-color: #cce6f2;
+            background-color: #0099cc;
+            color: white;
+            border-color: #0077b3;
         }
         strong {
             font-weight: 600;
@@ -61,6 +68,12 @@
         a:hover {
             text-decoration: underline;
         }
+        .button-container { /* Correct class name */
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
         button {
             background-color: #0099cc;
             color: white;
@@ -69,11 +82,9 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 1rem;
-            margin-top: 1rem;
             transition: background-color 0.3s ease;
         }
-
-        button:hover {
+                button:hover {
           background-color: #0077b3;
         }
         input[type="number"]{
@@ -84,7 +95,10 @@
           border: 1px solid #ccc;
           border-radius: 4px;
         }
-
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
     </style>
 </head>
 <body>
@@ -113,12 +127,10 @@
 
         <h3>Making Your Contribution</h3>
         <p>There are two ways you can contribute to Baby G's 529 plan:</p>
-        <ul>
-            <li><strong>Electronically:</strong> You can easily contribute electronically through Ugift by clicking the button below. This is the fastest and most secure method.</li>
-            <li><strong>By Mail:</strong> If you prefer to contribute by mail, you can download a printable contribution form by clicking <a href="https://www.collegeinvest529.com/cotpl/gift/gifterCoupon.cs?uGiftId=U66-R0C" target="_blank">here</a>.</li>
-        </ul>
-
-        <a href="https://www.ugift.com/" target="_blank"><button>Contribute Electronically</button></a>
+        <div class="button-container">
+            <a href="https://www.ugift529.com/" target="_blank"><button>Contribute Electronically</button></a>
+            <a href="https://www.collegeinvest529.com/cotpl/gift/gifterCoupon.cs?uGiftId=U66-R0C" target="_blank"><button>Contribute by Mail</button></a>
+        </div>
     </div>
     <p>If you have any questions or need help with this process, please don't hesitate to reach out!</p>
     <script>
