@@ -15,9 +15,7 @@
     background-color: #f2f2f2;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-weight: 600;
     color: #004a80;
 }
@@ -32,13 +30,16 @@ h2 {
     margin-bottom: 1rem;
 }
 
-.ugift-preview {
-    border: 1px solid #ddd;
-    padding: 2rem;
+.ugift-preview { /* Container for the white sections */
     margin-top: 2rem;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+}
+
+.white-section {
     background-color: white;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .gift-info-grid {
@@ -53,58 +54,6 @@ h2 {
     padding: 1rem;
     border-radius: 5px;
     background-color: #f9f9f9;
-}
-
-.gift-amount-section {
-    background-color: #e6f2f9;
-    padding: 1.5rem;
-    border-radius: 5px;
-    margin-bottom: 1.5rem;
-}
-
-.gift-amount-header {
-    margin-bottom: 1rem;
-}
-
-.gift-options {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0;
-}
-
-.gift-option {
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    background-color: #008000;
-    transition: background-color 0.3s ease;
-    color: white;
-    text-align: center;
-    flex: 1;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.gift-option:not(:last-child) {
-    margin-right: 1rem;
-}
-
-.gift-option:hover {
-    background-color: #006600;
-}
-
-.gift-option-amount {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-}
-
-.gift-option-description {
-    font-size: 0.8rem;
 }
 
 strong {
@@ -132,6 +81,12 @@ a:hover {
     margin-top: 2rem;
 }
 
+.button-container a {
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
 button {
     background-color: #7cb342;
     color: white;
@@ -145,15 +100,6 @@ button {
 
 button:hover {
     background-color: #0077b3;
-}
-
-input[type="number"] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
 }
 
 ul {
@@ -170,8 +116,9 @@ ul {
 }
 
 .bow {
-    width: 80px;
+    width: 25px;
     height: auto;
+    margin-bottom: -25px;
 }
 
 .bow img {
@@ -190,6 +137,7 @@ ul {
     font-weight: 600;
     font-size: 24px;
     color: #FFB6C1;
+    margin-right: -2px;
 }
 
 .g {
@@ -197,6 +145,23 @@ ul {
     font-weight: 600;
     font-size: 24px;
     color: #7cb342;
+    margin-left: -4px;
+}
+
+.ugift-code {
+    display: block;
+    font-size: 0.9rem;
+    color: #c00;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.ugift-disclaimer {
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+    margin-top: 2rem;
+    font-style: italic;
 }
     </style>
 </head>
@@ -216,58 +181,34 @@ ul {
     <p>We're using Ugift, a secure platform that allows you to easily contribute. Here's how:</p>
 
     <div class="ugift-preview">
-        <h3>Gift Information</h3>
-        <div class="gift-info-grid">
-            <div class="gift-info-item">
-                <strong>Initial Student:</strong><br>Alexander G
+        <div class="white-section">
+            <h3>Gift Information</h3>
+            <div class="gift-info-grid">
+                <div class="gift-info-item">
+                    <strong>Initial Student:</strong><br>Alexander G
+                </div>
+                <div class="gift-info-item">
+                    <strong>Account Owner:</strong><br>Alexander G
+                </div>
+                <div class="gift-info-item">
+                    <strong>Ugift Code:</strong><br><strong>U66-R0C</strong>
+                </div>
             </div>
-            <div class="gift-info-item">
-                <strong>Account Owner:</strong><br>Alexander G
-            </div>
-            <div class="gift-info-item">
-                <strong>Ugift Code:</strong><br><strong>U66-R0C</strong>
-            </div>
+            <p style="font-style: italic;">The student designation will transfer to Baby G once she receives her Social Security number after she is born.</p>
         </div>
-        <p style="font-size: smaller; font-style: italic;">The student designation will transfer to Baby G once she receives her Social Security number after she is born.</p>
-
-        <div class="gift-amount-section">
-          <div class="gift-amount-header">
-            <h3>How much would you like to give?</h3>
-          </div>
-            <input type="number" id="gift-amount" value="0.00">
-            <div class="gift-options">
-                <div class="gift-option" data-amount="25">
-                    <div class="gift-option-amount">$25</div>
-                    <div class="gift-option-description">Popular gift amount</div>
+        <div class="white-section">
+            <h3>Making Your Contribution</h3>
+            <p>There are two ways you can contribute to Baby G's 529 plan:</p>
+            <div class="button-container">
+                <div>
+                    <a href="https://www.ugift529.com/" target="_blank"><button>Contribute Electronically</button></a>
+                    <span class="ugift-code">Baby G's Ugift code: <strong>U66-R0C</strong></span>
                 </div>
-                <div class="gift-option" data-amount="157">
-                    <div class="gift-option-amount">$157</div>
-                    <div class="gift-option-description">Avg weekly cost for college meals</div>
-                </div>
-                <div class="gift-option" data-amount="415">
-                    <div class="gift-option-amount">$415</div>
-                    <div class="gift-option-description">Avg annual cost of required course materials</div>
-                </div>
+                <a href="https://www.collegeinvest529.com/cotpl/gift/gifterCoupon.cs?uGiftId=U66-R0C" target="_blank"><button>Contribute by Mail</button></a>
             </div>
-        </div>
-
-        <h3>Making Your Contribution</h3>
-        <p>There are two ways you can contribute to Baby G's 529 plan:</p>
-        <div class="button-container">
-            <a href="https://www.ugift529.com/" target="_blank"><button>Contribute Electronically</button></a>
-            <a href="https://www.collegeinvest529.com/cotpl/gift/gifterCoupon.cs?uGiftId=U66-R0C" target="_blank"><button>Contribute by Mail</button></a>
+            <p>If you have any questions or need help with this process, please don't hesitate to reach out!</p>
+            <p class="ugift-disclaimer">When contributing electronically, you will be prompted to enter Baby G's Ugift code: <strong>U66-R0C</strong> on the next page.</p>
         </div>
     </div>
-    <p>If you have any questions or need help with this process, please don't hesitate to reach out!</p>
-    <script>
-        const giftOptions = document.querySelectorAll('.gift-option');
-        const giftAmountInput = document.getElementById('gift-amount');
-
-        giftOptions.forEach(option => {
-            option.addEventListener('click', () => {
-                giftAmountInput.value = option.dataset.amount;
-            });
-        });
-    </script>
 </body>
 </html>
